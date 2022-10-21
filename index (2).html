@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<htm>
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+<body>
+    <h1>Meldungen</h1>
+<div class="container">
+    
+        <a href="#"><h2>Überschrift</h2></a>
+        <div id="" class="Animation2">
+
+            <strong>werbung...</strong>
+
+        </div>
+</div>
+<div class="container">
+    
+    <a href="#"><h2>Überschrift</h2></a>
+<div id="" class="Animation2">
+
+    <strong>werbung...</strong>
+
+</div>
+</div>
+<div class="container">
+    
+    <a href="#"><h2>Überschrift</h2></a>
+    <div id="" class="Animation2">
+
+        <strong>werbung...</strong>
+
+    </div>
+</div>
+<div class="container">
+    
+    <a href="#"><h2>Überschrift</h2></a>
+    <div id="" class="Animation2">
+        <strong>werbung...</strong>
+    </div>
+</div>
+    <script type="text/javascript">
+    var alleLinks = document.querySelectorAll("a")
+    alleLinks.forEach(function(link){
+        link.addEventListener("click",function(e){
+
+            var test2 = e.target.parentNode.parentNode.querySelector("div")
+
+            if (test2.getAttribute("class") == "Animation"){
+                hideElement(test2)
+           } else{
+                hideAllElements()
+                showElement(test2)
+           }
+           
+        })
+    })
+
+    function hideAllElements(){
+        document.querySelectorAll(".container div").forEach(function(link){
+            hideElement(link)
+        })
+    }
+
+    function showElement(element){
+        element.setAttribute("class", "Animation")
+    }
+    function hideElement(element){
+        element.setAttribute("class", "Animation2")
+    }
+  </script> 
+  
+</body>
+</htm>
